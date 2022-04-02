@@ -236,3 +236,15 @@ body {
 .button-55:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
+
+
+@media (max-width:577px) {
+    .container h1 {
+               font-size: 20px;
+    }
+.button-55 {
+   margin-top: 50px;
+  
+font-size: 0.8rem;
+}
+}

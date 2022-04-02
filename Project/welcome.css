@@ -19,8 +19,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    background: url(video/bg.jpg);
+    background: url(video/bg.png);
     background-size:cover ;
+
     border-radius: 50px;
     margin: 10%;
     align-items: center;
@@ -30,14 +31,14 @@ body {
     text-align: center;
     width: 80%;
     height: 70vh;
-    background-color: rgba(255, 255, 255, 0.889);
+    background-color: #342844;
 
 }
 
 .container h1 {
     margin: 5%;
     color: #ffffff;
-    background: linear-gradient(to right, #0e0d0d 0, rgba(255, 255, 255, 0.07) 10%, #4d4d4d 20%);
+    background: linear-gradient(to right, #0e0d0d 0, rgba(255, 255, 255, 0.07) 10%, #fffdfd 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 5s linear infinite;

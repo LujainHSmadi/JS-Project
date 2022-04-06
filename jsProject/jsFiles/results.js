@@ -112,7 +112,7 @@ x.onload = function () {
 x.send()
 
 logout.addEventListener("click", function () {
-    window.location.href = "http://127.0.0.1:5500/home.html"
+    window.location.href = "http://127.0.0.1:5500/jsProject/home.html"
 })
 
 

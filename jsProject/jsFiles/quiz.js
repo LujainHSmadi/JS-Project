@@ -57,6 +57,7 @@ next.addEventListener("click", function () {
         }
 
         for (let i = 0; i < btn.length; i++) {
+            
             btn[i].addEventListener("click", function () {
 
 
@@ -72,7 +73,7 @@ next.addEventListener("click", function () {
     if (numberOfQustion == 20) {
         next.disabled = false
         next.addEventListener("click", function () {
-            window.location.href = "http://127.0.0.1:5500/results.html"
+            window.location.href = "http://127.0.0.1:5500/jsProject/results.html"
         })
 
         card.innerHTML = `<p id="sectionTest">Show Results <br> <span>click next to view results </span></p>`
@@ -108,7 +109,7 @@ function myTimer() {
     if (minute == -1) {
         minute = 0
         clearInterval();
-        card.innerHTML = `<p id="viewResult"><a href = "http://127.0.0.1:5500/results.html" id="sectionTest">View Results</a></p>`
+        card.innerHTML = `<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
 
     }
 }

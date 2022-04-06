@@ -76,7 +76,7 @@ registerbtn.addEventListener('click' , function(e){
 loginbtn.addEventListener("click",function(){
     if(logEmail.value != "" && logpass.value !=""){
         if(logEmail.value == localStorage.getItem("email") && logpass.value == localStorage.getItem("password") ){
-            loginbtn.href = "http://127.0.0.1:5500/jsProject/welcom.html"
+            loginbtn.href = "http://127.0.0.1:5500/welcom.html"
         }else{
             logEmail.style.border = "red 1px solid"
             logpass.style.border = "red 1px solid"

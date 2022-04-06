@@ -382,10 +382,13 @@ a {
   
   
     #sectionTest {
-      font-size: 20px;
+      font-size:2rem;
   
     }
-  
+  #sectionTest span{
+    
+    font-size:1rem
+  }
     button {
       top: 80%;
     }

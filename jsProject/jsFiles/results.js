@@ -10,7 +10,7 @@ let logout = document.getElementById("logout")
 let resultCount = 0;
 let totalResult = 0;
 
-let allqqq = document.getElementById("all-card") 
+let allqqq = document.getElementById("all-card")
 
 
 
@@ -22,11 +22,11 @@ x.onload = function () {
 
     //count the number of correct answers
     for (let i = 0; i < 20; i++) {
-        if (sessionStorage.getItem(`${i+1}`) == result[i].correct) {
+        if (sessionStorage.getItem(`${i + 1}`) == result[i].correct) {
             resultCount++;
         }
     }
- 
+
     totalResult = (resultCount / 20) * 100;
 
 
@@ -57,21 +57,21 @@ x.onload = function () {
 
     for (let i = 0; i < result.length; i++) {
 
-            qustionData += `        
+        qustionData += `        
             <div class="all-card" >
             <div id="qustion">Q ${i + 1}:${result[i].question}</div>
             <div id="choices" class="qustionsssss">
                 <div class="choice">
-                    <input type="button" disabled class="group${i+1}" class="btn" value="${result[i].a}">
+                    <input type="button" disabled class="group${i + 1}" class="btn" value="${result[i].a}">
                 </div>
                 <div class="choice">
-                    <input type="button" disabled class="group${i+1}" class="btn" value="${result[i].b}">
+                    <input type="button" disabled class="group${i + 1}" class="btn" value="${result[i].b}">
                 </div>
                 <div class="choice">
-                    <input type="button" disabled class="group${i+1}" class="btn" value="${result[i].c}">
+                    <input type="button" disabled class="group${i + 1}" class="btn" value="${result[i].c}">
                 </div>
                 <div class="choice">
-                    <input type="button" disabled class="group${i+1}" class="btn" value="${result[i].d}">
+                    <input type="button" disabled class="group${i + 1}" class="btn" value="${result[i].d}">
                 </div>
             </div>
             </div>
@@ -81,38 +81,38 @@ x.onload = function () {
     }
     let testChoices = document.querySelectorAll(".qustionsssss");
     let choice = document.querySelectorAll(".btn")
- 
-    
 
 
-    for(let j = 0 ; j<testChoices.length ; j++){
-        let qqqq = document.querySelectorAll(`.group${j+1}`)   
-        for(let l = 0 ; l<qqqq.length ; l++){
-            if(l==result[j].correct){
-                
+
+
+    for (let j = 0; j < testChoices.length; j++) {
+        let qqqq = document.querySelectorAll(`.group${j + 1}`)
+        for (let l = 0; l < qqqq.length; l++) {
+            if (l == result[j].correct) {
+
                 qqqq[l].setAttribute("class", "btn-correct")
-                
-            }else if (l == sessionStorage.getItem(`${j+1}`)){
+
+            } else if (l == sessionStorage.getItem(`${j + 1}`)) {
                 qqqq[l].setAttribute("class", "btn-fail")
-                
-            }else{
+
+            } else {
                 qqqq[l].setAttribute("class", "btn-fail")
             }
         }
     }
 
 
-      
+
     showAnalysis.addEventListener("click", function () {
-        qustionsAnalysis.style.opacity = 1 ;
+        qustionsAnalysis.style.opacity = 1;
     })
 
 }
 
 x.send()
 
-logout.addEventListener("click" , function(){
-    window.location.href = "http://127.0.0.1:5500/jsProject/home.html"
+logout.addEventListener("click", function () {
+    window.location.href = "http://127.0.0.1:5500/home.html"
 })
 
 

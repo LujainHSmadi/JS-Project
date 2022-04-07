@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     background: url(bg.png);
-    background-size:cover ;
+    background-size: cover;
 
     border-radius: 50px;
     margin: 10%;
@@ -240,11 +240,12 @@ body {
 
 
 
-a{
+a {
     text-decoration: none;
-    
+
 }
-a:hover{
+
+a:hover {
     color: white;
 }
 
@@ -274,7 +275,7 @@ a:hover{
 
     body {
         overflow: auto;
-        
+
     }
 
     p {
@@ -285,15 +286,17 @@ a:hover{
         font-size: 1.5rem;
     }
 
+
 }
 
 
 
 
 @media (max-width:768px) and (min-width:481px) {
-    
 
-    .header-text,h1 {
+
+    .header-text,
+    h1 {
         font-size: 2rem !important;
     }
 
@@ -305,30 +308,39 @@ a:hover{
     p {
         font-size: 0.85rem !important;
     }
-
+        
+    
 }
 
 
 
 
 @media (max-width:480px) {
-    
 
 
-    .fade-in-text,h1 {
+
+    .fade-in-text,
+    h1 {
         font-size: 1rem !important;
         padding-top: 20px;
 
     }
 
-    .button-55{
+    .button-55 {
         margin-top: 50px;
     }
 
-    .container{
+    .container {
         margin-top: 150px;
         width: 80%;
         height: 50vh;
 
+    }
+
+    .description {
+        font-size: 0.85rem !important;
+    }
+    .button-55 {
+        margin-top: 20px;
     }
 }

@@ -16,8 +16,10 @@ card.innerHTML = `<div id="sectionTest">IQ Test <br><br>  <span>You have five Qu
 
 next.addEventListener("click", function () {
 
-    let t = setInterval(myTimer, 1000)
-
+    // let t = setInterval(startTimer, 1000)
+    var time = 60 / 2; // your time in seconds here
+         display = document.querySelector('#timer');
+    
 
     //calling Json file 
 
@@ -40,6 +42,10 @@ next.addEventListener("click", function () {
     <input type="button" class="btn" value="${y[numberOfQustion].d}" name="b" >
     </div>`
 
+        for (let index = -1; index < numberOfQustion.length; index++) {
+            startTimer(time, display);
+            display = document.querySelector('#timer');
+        }
         card.innerHTML = content
         if (count == 6) {
 
@@ -57,7 +63,7 @@ next.addEventListener("click", function () {
         }
 
         for (let i = 0; i < btn.length; i++) {
-            
+
             btn[i].addEventListener("click", function () {
 
 
@@ -83,35 +89,65 @@ next.addEventListener("click", function () {
     x.send()
 })
 
-let second = 59;
-let minute = 29;
-let flag;
+// let second = 59;
+// let minute = 29;
+// let flag;
 //let y = setInterval(myTimer,1000)
 
 
 
-function myTimer() {
+// function myTimer() {
 
-    document.getElementById("timer").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true" >  ${minute + ':' + second}</i>`
-    console.log(minute + ':' + second)
-    second--;
-    if (minute == 0 && second == 0) {
-        flag = true;
-        console.log(flag)
+//     document.getElementById("timer").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true" >  ${minute + ':' + second}</i>`
+//     console.log(minute + ':' + second)
+//     second--;
+//     if (minute == 0 && second == 0) {
+//         flag = true;
+//         console.log(flag)
 
-    }
+//     }
 
-    if (second == 0) {
-        minute--;
-        second = 59;
-    }
+//     if (second == 0) {
+//         minute--;
+//         second = 59;
+//     }
 
-    if (minute == -1) {
-        minute = 0
-        clearInterval();
-        card.innerHTML = `<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
+//     if (minute == -1) {
+//         minute = 0
+//         clearInterval();
+//         card.innerHTML = `<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
 
-    }
+//     }
+// }
+
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.innerHTML = `<i class="fa fa-clock-o" aria-hidden="true" > ${minutes + ':' + seconds}</i>`;
+
+        if (--timer < 0) {
+            timer = 0;
+            // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+        }
+        if (minutes < 0) {
+            minutes = 0
+            clearInterval();
+            card.innerHTML = `<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
+
+        }
+    }, 1000);
 }
 
+// window.onload = function () {
+//     var time = 60 / 2, // your time in seconds here
+//         display = document.querySelector('#timer');
+//     startTimer(time, display);
 
+// };
